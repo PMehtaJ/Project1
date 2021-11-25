@@ -101,7 +101,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the jumpbox and follow the steps below
 - Start the Ansible container.
 - SSH into the Ansible container
-- Copy the filebeat-configuration.yml file to /etc/filebeat/filebeat.yml & Copy the metricbeat-configuration.yml file to /etc/ansible/files
+- Copy the [filebeat-configuration.yml](https://github.com/PMehtaJ/Project1/blob/main/Filebeat%20Config)file to /etc/filebeat/filebeat.yml & Copy the [metricbeat-configuration.yml](https://github.com/PMehtaJ/Project1/blob/main/Metricbeat%20config) file to /etc/ansible/files
 - Update the  file to include the following
      - output.elasticsearch:
        hosts: ["10.2.0.4:9200"]
@@ -114,7 +114,7 @@ SSH into the jumpbox and follow the steps below
 - Run the playbook, and navigate to systemlogs click on check data on the Kibana page to check that the installation worked as expected.
 ![image](https://user-images.githubusercontent.com/89238085/143398430-69d2f8c4-fdf3-4f77-ac84-ec3e92f27aaa.png)
 
-Filebeat_playbook and Metricbeat_playbook are playbooks and you copy them to etc/ensible folder
+[Filebeat_playbook](https://github.com/PMehtaJ/Project1/blob/main/filebeat%20playbook)and [Metricbeat_playbook](https://github.com/PMehtaJ/Project1/blob/main/Metricbeat%20playbook) are playbooks and you copy them to etc/ensible folder
 
 Ansible playbooks that are configured for 
 You update hosts file to define where the Ansible playbooks will run the elk server to the list. You will need to update the filebeat.yml file to run the ansible playbook 
@@ -127,5 +127,5 @@ $sudo docker container list -a
 $sudo docker start container_name
 $sudo docker attach container_name
 $cd etc/ansible
-$ansible-playbook elk.yml
+$ansible-playbook [elk.yml](https://github.com/PMehtaJ/Project1/blob/main/elk%20yml)
 $ansible-playbook filebeat-playbook.yml
